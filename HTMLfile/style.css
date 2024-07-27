@@ -10,8 +10,8 @@ body {
     background-position: center;
     font-family: sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: right;
+    justify-content: right;
+    align-items: center;
     height: 100vh;
 }
 
