@@ -34,7 +34,7 @@ body {
 
 .text-content {
     max-width: 50%;
-    color: rgb(6, 223, 243);
+    color: rgb(1, 6, 6);
     text-align: left;
     padding-left: 20px;
 }
@@ -47,29 +47,30 @@ body {
 .text-content h2 {
     font-size: 48px;
     font-weight: bold;
-    color: #333;
+    color:black ;
 }
 
 .text-content h3 {
     font-size: 24px;
-    color: #777;
+    color:black ;
 }
 
 .form-box {
-    width: 300px;
-    background: rgba(125, 203, 238, 0.8);
+    width: 500px ;
+    background: transparent;
     padding: 50px 20px;
-    color: #fff;
+    color: black;
     box-shadow: 0 0 20px 2px rgba(178, 204, 222, 0.5);
     position: fixed;
     top: 10px;
     right: 10px;
+    align-items: center;
 }
 
 h1 {
     text-align: center;
     margin-bottom: 40px;
-    color: rgb(0, 0, 0);
+    color: black ;
 }
 
 .input-box {
@@ -92,12 +93,12 @@ h1 {
 }
 
 ::placeholder {
-    color: #ccc;
+    color:black ;
 }
 
 .fa {
     margin-right: 10px;
-    color: #ccc;
+    color: black;
 }
 
 .eye {
@@ -116,10 +117,9 @@ h1 {
     display: block;
     outline: none;
     padding: 10px 0;
-    border: 1px solid #fff;
+    border: 1px solid black ;
     cursor: pointer;
     background: transparent;
-    color: #0a0101;
+    color: black ;
     text-align: center;
-    text-decoration-color: #0a0101;
-}
+}   
