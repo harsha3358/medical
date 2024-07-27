@@ -1,44 +1,74 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Honest Software Solutions</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    </head>
-    <body>
-        <div class="form-box">
-            <h1>Login here</h1>
-            <div class="input-box">
-                <i class="fa fa-envelope"></i>
-                <input type="email" placeholder="Email ID">
-            </div>
-            <div class="input-box">
-                <i class="fa fa-key"></i>
-                <input type="password" placeholder="Password" id = "myinput">
-                <span class="eye" onclick="myFunction()">
-                    <i id="hide1" class="fa fa-eye"></i>
-                    <i id="hide2" class="fa fa-eye-slash"></i>
-                </span>
-            </div>
-            <button type="button" class="login-btn">Login</button>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honest Software Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="form-box" id="formBox">
+        <img src='image1.webp' alt="logo" id="logo"> 
+        <h1>Login here</h1>
+        <div class="input-box">
+            <i class="fa fa-envelope"></i>
+            <input type="text" placeholder="User ID" id="userId">
         </div>
-        <script>
-            function myFunction(){
-                var x = document.getElementById("myinput");
-                var y = document.getElementById("hide1");
-                var z = document.getElementById("hide2");
+        <div class="input-box">
+            <i class="fa fa-key"></i>
+            <input type="password" placeholder="Password" id="myinput">
+            <span class="eye" onclick="myFunction()">
+                <i id="hide1" class="fa fa-eye"></i>
+                <i id="hide2" class="fa fa-eye-slash"></i>
+            </span>
+        </div>
+        <button type="button" class="login-btn" onclick="changeColorAndRedirect()">Login</button>
+    </div>
+    <script>
+        function myFunction(){
+            var x = document.getElementById("myinput");
+            var y = document.getElementById("hide1");
+            var z = document.getElementById("hide2");
 
-                if(x.type === "password"){
-                    x.type = "text";
-                    y.style.display = "block";
-                    z.style.display = "none";
-                }
-                else{
-                    x.type = "password";
-                    y.style.display = "block";
-                    z.style.display = "none";
-                }
+            if(x.type === "password"){
+                x.type = "text";
+                y.style.display = "block";
+                z.style.display = "none";
+            } else {
+                x.type = "password";
+                y.style.display = "block";
+                z.style.display = "none";
             }
-        </script>
-    </body>
+        }
+
+        function checkCredentials() {
+            const validUserId = "admin";
+            const validPassword = "1234";
+          
+            const userId = document.getElementById("userId").value;
+            const password = document.getElementById("myinput").value;
+            
+            if (userId === validUserId && password === validPassword) {
+                return true;
+            } else {
+                alert("Invalid User ID or Password");
+                return false;
+            }
+        }
+
+        function changeColor(){ 
+            document.getElementById('formBox').style.backgroundColor = 'red';
+        }
+
+        function changeColorAndRedirect(){
+            if (checkCredentials()) {
+                changeColor();
+                setTimeout(function() {
+                    window.location.href = "newPage.html"; 
+                }, 500); 
+            }
+        }
+    </script>
+</body>
 </html>
