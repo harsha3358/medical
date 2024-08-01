@@ -1,3 +1,4 @@
+/* Existing styles */
 * {
     margin: 0;
     padding: 0;
@@ -108,4 +109,28 @@ h1 {
 .login-btn:hover {
     background: white;
     color: #333;
+}
+
+.horizontal-marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: fixed; 
+    bottom: 0; 
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.horizontal-marquee-content {
+    display: inline-block;
+    padding-right: 100%; 
+    animation: horizontalMarquee 20s linear infinite;
+}
+
+@keyframes horizontalMarquee {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%);
+    }
 }
